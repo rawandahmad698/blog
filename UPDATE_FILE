@@ -1,3 +1,5 @@
 project:blog
 version:1.0.0
-overwrite:main.py
+overwrite:index.py
+overwrite:requirements.txt
+overwrite:.gitignore

@@ -4,6 +4,9 @@ import os
 import signal
 import sys
 
+# Env
+from dotenv import load_dotenv
+
 # Sockets
 import websockets
 
@@ -19,10 +22,13 @@ from classes import utils as u
 from classes import post_parser as p
 from shlex import quote as shlex_quote
 
+load_dotenv()
+
 # First, get environment variables
 github_api_token = os.getenv("GITHUB_API_TOKEN")
 github_repo = os.getenv("GITHUB_REPO")
 socket_address = os.getenv("SOCKET_ADDRESS")
+
 
 # If any of the environment variables are missing, exit
 if github_api_token is None or github_repo is None or socket_address is None:

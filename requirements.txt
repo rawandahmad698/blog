@@ -1,5 +1,6 @@
-fastapi[all]
-pyyaml
+fastapi[all]~=0.88.0
+pyyaml~=6.0
 pytest
 motor~=3.0.0
 websockets~=10.3
+python-dotenv~=0.21.0
