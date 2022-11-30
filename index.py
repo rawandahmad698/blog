@@ -15,7 +15,6 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 # Local
 from classes import paragraph_parser as pp
@@ -41,7 +40,6 @@ if github_api_token is None or github_repo is None or socket_address is None:
 
 # Create the app
 app = FastAPI()
-app.add_middleware(HTTPSRedirectMiddleware)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")

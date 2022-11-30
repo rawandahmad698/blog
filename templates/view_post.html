@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ url_for('static', path='/dist/font-face.css') }}">
 
-    <!-- Get script moment+locale.js from static/scripts -->
-    <script src="{{ url_for('static', path='/scripts/moment+locale.js') }}"></script>
+    <link rel="stylesheet" href="https://meshmonitorsr.s3.us-east-2.amazonaws.com/dist/font-face.css">
+    <script src="https://meshmonitorsr.s3.us-east-2.amazonaws.com/dist/moment%2Blocale.js" crossorigin="anonymous"></script>
 
     <!-- Seo Meta tags for social medias, including post title, image and description -->
     <meta name="title" content="{{ post.title }} | Rawa.Dev">

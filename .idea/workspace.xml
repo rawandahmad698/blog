@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="Initial.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UPDATE_FILE" beforeDir="false" afterPath="$PROJECT_DIR$/UPDATE_FILE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/view_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view_post.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <recent name="$PROJECT_DIR$/static/extra" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.index">
+  <component name="RunManager" selected="FastAPI.Unnamed">
     <configuration name="index" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blog-fast-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,7 +122,7 @@
       <updated>1669726878283</updated>
       <workItem from="1669726879409" duration="8816000" />
       <workItem from="1669798511622" duration="4816000" />
-      <workItem from="1669804966921" duration="1500000" />
+      <workItem from="1669804966921" duration="2204000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1669803895680</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669806855171</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial.">
+      <created>1669807411705</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669807411705</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +181,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog_fast_api$main.coverage" NAME="main Coverage Results" MODIFIED="1669726926473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/blog_fast_api$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1669803637544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/blog_fast_api$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1669807993954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/blog_fast_api$index.coverage" NAME="index Coverage Results" MODIFIED="1669805097348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
