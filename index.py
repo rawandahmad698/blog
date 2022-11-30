@@ -27,12 +27,14 @@ async def read_item(request: Request):
 @app.get("/post", response_class=HTMLResponse)
 async def read_item(request: Request, pid: str):
     if pid is None:
-        return templates.TemplateResponse("index.html", {"request": request})
+        posts = await p.get_posts_from_aws()  # AWS
+        return templates.TemplateResponse("index.html", {"request": request, "posts": posts})
 
     # post_data = pp.parse_paragraphs(f"{pid}.yml") # Local
     post_data = await pp.parse_paragraphs_aws(f"{pid}.yml")  # AWS
     if post_data is None:
-        return templates.TemplateResponse("index.html", {"request": request})
+        posts = await p.get_posts_from_aws()  # AWS
+        return templates.TemplateResponse("index.html", {"request": request, "posts": posts})
 
     title = post_data['title']
     description = post_data['description']

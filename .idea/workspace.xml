@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="Upload posts to S3">
+    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="Alpha version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UPDATE_FILE" beforeDir="false" afterPath="$PROJECT_DIR$/UPDATE_FILE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/paragraph_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/paragraph_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/post_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/post_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
       <recent name="$PROJECT_DIR$/static/extra" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.paragraph_parser">
+  <component name="RunManager" selected="FastAPI.Unnamed">
     <configuration name="index" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blog-fast-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,7 +172,7 @@
       <updated>1669726878283</updated>
       <workItem from="1669726879409" duration="8816000" />
       <workItem from="1669798511622" duration="4816000" />
-      <workItem from="1669804966921" duration="7795000" />
+      <workItem from="1669804966921" duration="8099000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1669803895680</created>
@@ -349,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669822400943</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Alpha version">
+      <created>1669823148808</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1669823148808</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,12 +382,13 @@
     </ignored-roots>
     <MESSAGE value="Initial." />
     <MESSAGE value="Upload posts to S3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload posts to S3" />
+    <MESSAGE value="Alpha version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha version" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog_fast_api$main.coverage" NAME="main Coverage Results" MODIFIED="1669726926473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/blog_fast_api$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1669807993954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/blog_fast_api$paragraph_parser.coverage" NAME="paragraph_parser Coverage Results" MODIFIED="1669822985087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
+    <SUITE FILE_PATH="coverage/blog_fast_api$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1669823847127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/blog_fast_api$index.coverage" NAME="index Coverage Results" MODIFIED="1669805097348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/blog_fast_api$post_parser.coverage" NAME="post_parser Coverage Results" MODIFIED="1669822869692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
   </component>

@@ -58,7 +58,6 @@ async def parse_paragraphs_aws(yml_file_name: str) -> dict or None:
                 if resp.status == 200:
                     post_data = await resp.text()
                     post_data = yaml.safe_load(post_data)
-                    print(post_data)
                     return post_data
                 else:
                     print(">> Error while getting posts from AWS: {}".format(resp.status))
