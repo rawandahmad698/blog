@@ -16,3 +16,23 @@ jobs:
           file-path: static/posts.json
           bucket-root: /
           destination-dir: /
+        # Get the newly added file to the commit
+      - name: Get the newly added file to the commit under the posts directory
+        id: get_file
+        run: |
+          echo "::set-output name=filename::$(git diff --name-only HEAD^ HEAD | grep posts/ | head -n 1)"
+
+      - name: Upload the file to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: me-south-1
+          SOURCE_DIR: static/posts
+          DEST_DIR: posts
+          DEST_FILE: ${{ steps.get_file.outputs.filename }}
+
+

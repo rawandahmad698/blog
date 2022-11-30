@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="Upload posts to S3">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/actions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/actions.yml" afterDir="false" />
-    </list>
+    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="Upload posts to S3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +120,7 @@
       <updated>1669726878283</updated>
       <workItem from="1669726879409" duration="8816000" />
       <workItem from="1669798511622" duration="4816000" />
-      <workItem from="1669804966921" duration="6576000" />
+      <workItem from="1669804966921" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1669803895680</created>
@@ -278,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669821845002</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Upload posts to S3">
+      <created>1669821900836</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669821900836</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Upload posts to S3">
+      <created>1669821942793</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1669821942793</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
