@@ -15,3 +15,4 @@ jobs:
           aws-bucket: ${{ secrets.AWS_BUCKET }}
           file-path: static/posts.json
           bucket_root: /
+          destination-dir: /
