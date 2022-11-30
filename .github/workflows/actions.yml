@@ -14,3 +14,4 @@ jobs:
           aws-region: 'me-south-1'
           aws-bucket: ${{ secrets.AWS_BUCKET }}
           file-path: static/posts.json
+          bucket_root: /
