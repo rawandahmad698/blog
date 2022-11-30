@@ -1,5 +1,6 @@
 import os
 import json
+import aiohttp
 
 
 def get_posts():
@@ -15,3 +16,22 @@ def get_posts():
         print(">> Could not find file: {}".format(json_file_path))
     except Exception as e:
         print(">> Error while parsing file: {}".format(e))
+
+
+async def get_posts_from_aws() -> list:
+    url = "https://s3.me-south-1.amazonaws.com/rawa.dev-blog/posts.json"
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as resp:
+                if resp.status == 200:
+                    posts = await resp.text()
+                    posts = json.loads(posts)
+                    return posts['posts']
+                else:
+                    print(">> Error while fetching posts from AWS")
+                    return []
+    except Exception as e:
+        print(">> Error while getting posts from AWS: {}".format(e))
+        return []
+    finally:
+        await session.close()

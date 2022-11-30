@@ -1,5 +1,6 @@
 import yaml
 import os
+import aiohttp
 
 
 def parse_paragraphs(yml_file_name: str) -> dict:
@@ -47,3 +48,23 @@ def parse_paragraphs(yml_file_name: str) -> dict:
         print(">> Error while parsing file: {}".format(e))
 
     return post_data
+
+
+async def parse_paragraphs_aws(yml_file_name: str) -> dict or None:
+    url = "https://s3.me-south-1.amazonaws.com/rawa.dev-blog/posts/{}".format(yml_file_name)
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as resp:
+                if resp.status == 200:
+                    post_data = await resp.text()
+                    post_data = yaml.safe_load(post_data)
+                    print(post_data)
+                    return post_data
+                else:
+                    print(">> Error while getting posts from AWS: {}".format(resp.status))
+                    return None
+    except Exception as e:
+        print(">> Error while getting posts from AWS: {}".format(e))
+        return None
+    finally:
+        await session.close()

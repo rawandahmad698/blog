@@ -1,6 +1,6 @@
 project:blog
 version:1.0.0
 overwrite:index.py
-overwrite:templates/index.html
-overwrite:templates/view_post.html
+overwrite:classes/paragraph_parser.py
+overwrite:classes/post_parser.py
 overwrite:UPDATE_FILE
