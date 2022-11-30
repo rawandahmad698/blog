@@ -36,7 +36,7 @@ if github_api_token is None or github_repo is None or socket_address is None:
     print(">> github_api_token:", github_api_token)
     print(">> github_repo:", github_repo)
     print(">> socket_address:", socket_address)
-    # sys.exit()
+    sys.exit()
 
 # Create the app
 app = FastAPI()
@@ -127,8 +127,7 @@ async def socket_handler():
 
 
 async def background_task():
-    # await socket_handler()
-    pass
+    await socket_handler()
 
 
 @app.on_event("startup")
