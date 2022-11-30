@@ -5,7 +5,7 @@ timestamp: 1669841151
 
 paragraphs:
   - type: image
-    image: 'https://picsum.photos/536/354'
+    image: 'https://s3.me-south-1.amazonaws.com/rawa.dev-blog/artifacts/design.png'
     text: 'کاپشنێک بۆ وێنەکە'
   - type: text
     text: ' '
