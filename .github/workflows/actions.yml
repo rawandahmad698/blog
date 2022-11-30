@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: shallwefootball/s3-upload-action@master
+      - uses: hkusu/s3-upload-action@v2
         with:
-          aws_key_id: ${{ secrets.AWS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-          aws_bucket: ${{ secrets.AWS_BUCKET }}
-          # source dir is posts.json under the root dir/static
-          source_dir: static
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'me-south-1'
+          aws-bucket: ${{ secrets.AWS_BUCKET }}
+          file-path: static/posts.json
