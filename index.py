@@ -89,12 +89,12 @@ async def update(ws):
     os.system(f"meshsync -u -f -t {github_api_token} -o {github_repo}")
     await asyncio.sleep(3)
     stop_command = "sudo systemctl stop fastapi_demo"
-    os.system(shlex_quote(stop_command))
+    os.system(stop_command)
 
     await asyncio.sleep(1)
 
     start_command = "sudo systemctl start fastapi_demo"
-    os.system(shlex_quote(start_command))
+    os.system(start_command)
     await asyncio.sleep(1)
 
     sys.exit()  # Exit current script
