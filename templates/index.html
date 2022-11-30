@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Get script moment+locale.js from static/scripts -->
+    <script src="{{ url_for('static', path='/scripts/moment+locale.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/dist/font-face.css') }}">
+
+    <meta name="title" content="Rawa.Dev | Rawand Ahmed Shaswar's Blog">
+    <meta name="description" content="A personal blog on Python, Swift & AWS">
+    <meta name="keywords" content="Swift, Python, AWS, Rawand Ahmed Shaswar">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Rawand Ahmed Shaswar">
+    
+    <style>
+        @font-face {
+            font-family: 'Apple SystemUI';
+            src: url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Display-Semibold.otf?raw=true');
+        }
+        
+        @font-face {
+            font-family: 'AppleBold';
+            src: url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Text-Medium.otf?raw=true');
+        }
+        
+        .logo {
+            font-family: 'Apple SystemUI';
+        }
+        
+        .followMe {
+            font-family: 'AppleBold';
+        }
+        
+        .dateLabel {
+            font-family: 'Sahel', sans-serif;
+            font-size: small;
+            margin-top: 2%;
+        }
+        
+        
+        body {
+            font-family: 'Sahel', sans-serif;
+        }
+        /* When postTitle in hover, make a rectangle yellowish background appear */
+        
+        .postTitle:hover {
+            background-color: rgba(234, 250, 130, 0.5)
+            /* Make backrgound opacity 0.5 */
+        }
+
+        .rect_logo {
+            fill:white;
+            stroke-width:3;
+            stroke:rgb(0,0,0);
+        }
+
+    </style>
+
+</head>
+
+
+<body dir="rtl" class="bg-white dark:bg-[#2f3542] dark:text-white">
+    <!-- A Tailwind Nav bar with rawa.dev as the title and at the end of the screen, a Follow Me Button -->
+    <nav class="w-full flex relative justify-between items-center mx-auto px-8 h-20 w-full md:w-3/5">
+        <!-- logo -->
+        <div class="inline-flex">
+            <a class="_o6689fn" href="/"></a>
+            <div class="md:block">
+                <a class="inline-block rounded-full" href="/">
+                    <div class="flex items-center relative cursor-pointer whitespace-nowrap font-black logo text-lg">
+                        <svg class="pr-2" width="28" height="20">
+                            <rect class="fill-black dark:fill-white" width="300" height="100"/>
+                          </svg>
+                        <span class="pr-2">rawa.dev</span>
+
+                    </div>
+                </a>
+            </div>
+            </a>
+        </div>
+        <!-- end logo -->
+
+        <!-- Nav Pt2 -->
+        <div class="flex-initial">
+            <div class="flex justify-end items-center relative gap-4">
+
+                <div class="flex mr-4 items-center gap-2">
+                    <a class="inline-block py-2 px-3 rounded-full" href="https://twitter.com/RawandShaswar" target="_blank">
+                        <div class="flex items-center relative cursor-pointer whitespace-nowrap">🚀</div>
+                    </a>
+                    <a class="flex items-center relative cursor-pointer whitespace-nowrap text-sm hover:shadow-lg" href="https://github.com/rawandahmad698/blog" target="_blank">Github</a>
+                </div>
+
+                <div class="block">
+                    <div class="inline relative">
+                        <button type="button" class="hover:shadow-lg bg-black dark:text-white dark:bg-white">
+                            <div class="px-2 pt-1 pb-1">
+                                <a class="text-white followMe text-sm dark:text-black" href="https://twitter.com/RawandShaswar" target="_blank">Follow Me</a>
+
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end followMe -->
+    </nav>
+    <!-- end navbar -->
+
+    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">
+        {% for post in posts %}
+
+        <div class="inline-flex gap-4">
+            <!-- Make text RTL in tailwindcss -->
+            <p class="pt-2 dateFor{{post.id}} text-slate-400 text-[14px] font-light">-</p>
+            <a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a>
+        </div>
+        <script> 
+            moment.locale("ku"); 
+            // Get momentjs from timestamp
+            var timestamp = "{{ post.timestamp }}"
+            var timestamp_int = parseInt(timestamp)
+            var date = moment.unix(timestamp).format('MMMM Do, YYYY');
+            // Set <p> date_label to date
+            document.getElementsByClassName("dateFor{{post.id}}")[0].innerHTML = date;
+        </script>
+        {% endfor %}
+    </div>
+
+
+</body>
+
+</html>

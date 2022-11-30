@@ -1,0 +1,5 @@
+fastapi[all]
+pyyaml
+pytest
+motor~=3.0.0
+websockets~=10.3

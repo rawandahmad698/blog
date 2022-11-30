@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='/dist/font-face.css') }}">
+
+    <!-- Get script moment+locale.js from static/scripts -->
+    <script src="{{ url_for('static', path='/scripts/moment+locale.js') }}"></script>
+
+    <!-- Seo Meta tags for social medias, including post title, image and description -->
+    <meta name="title" content="{{ post.title }} | Rawa.Dev">
+    <meta name="description" content="{{ post.description }}">
+    <meta name="keywords" content="Swift, Python, AWS, Rawand Ahmed Shaswar">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Rawand Ahmed Shaswar">
+    
+    <meta property="og:title" content="{{ post.title }} | Rawa.Dev">
+    <meta property="og:description" content="{{ post.description }}">
+    <meta property="og:image" content="{{ url_for('static', path='/images/' + post.image) }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rawa.Dev">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rawandshaswar">
+    <meta name="twitter:creator" content="@rawandshaswar">
+    <meta name="twitter:title" content="{{ post.title }} | Rawa.Dev">
+    <meta name="twitter:description" content="{{ post.description }}">
+    <meta name="twitter:image" content="{{ url_for('static', path='/images/' + post.image) }}">
+
+    <style>
+        @font-face {
+            font-family: 'Apple SystemUI';
+            src: url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Display-Semibold.otf?raw=true');
+        }
+        
+        @font-face {
+            font-family: 'AppleBold';
+            src: url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Text-Medium.otf?raw=true');
+        }
+        
+        .logo {
+            font-family: 'Apple SystemUI';
+        }
+        
+        .followMe {
+            font-family: 'AppleBold';
+        }
+        
+        
+        .postTitle {
+            font-family: 'Sahel', sans-serif;
+            font-weight: 600;
+            font-size: 22px;
+        }
+        
+        body {
+            font-family: 'Sahel', sans-serif;
+        }
+
+        /* When postTitle in hover, make a rectangle yellowish background appear */
+        .postTitle:hover {
+            background-color: rgba(234, 250, 130, 0.5)
+        }
+
+        .rect_logo {
+            fill:white;
+            stroke-width:3;
+            stroke:rgb(0,0,0);
+        }
+
+    </style>
+
+</head>
+
+
+<body dir="rtl" class="bg-white dark:bg-[#2f3542] dark:text-white">
+    <!-- A Tailwind Nav bar with rawa.dev as the title and at the end of the screen, a Follow Me Button -->
+    <nav class="w-full flex relative justify-between items-center mx-auto px-8 h-20 w-full md:w-3/5">
+        <!-- logo -->
+        <div class="inline-flex">
+            <div class="md:block">
+                <a class="inline-block rounded-full" href="/">
+                    <div class="flex items-center relative cursor-pointer whitespace-nowrap font-black logo text-lg">
+                        <svg class="pr-2" width="28" height="20">
+                            <rect class="fill-black dark:fill-white" width="300" height="100"/>
+                          </svg>
+                        <span class="pr-2">rawa.dev</span>
+
+                    </div>
+                </a>
+            </div>
+            </a>
+        </div>
+        <!-- end logo -->
+
+        <!-- Nav Pt2 -->
+        <div class="flex-initial">
+            <div class="flex justify-end items-center relative gap-4">
+
+                <div class="flex mr-4 items-center gap-2">
+                    <a class="inline-block py-2 px-3 rounded-full" href="https://twitter.com/RawandShaswar" target="_blank">
+                        <div class="flex items-center relative cursor-pointer whitespace-nowrap">🚀</div>
+                    </a>
+                    <a class="flex items-center relative cursor-pointer whitespace-nowrap text-sm hover:shadow-lg" href="https://github.com/rawandahmad698/blog" target="_blank">Github</a>
+                </div>
+
+                <div class="block">
+                    <div class="inline relative">
+                        <button type="button" class="hover:shadow-lg bg-black dark:text-white dark:bg-white">
+                            <div class="px-2 pt-1 pb-1">
+                                <a class="text-white followMe text-sm dark:text-black" href="https://twitter.com/RawandShaswar" target="_blank">Follow Me</a>
+
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end followMe -->
+    </nav>
+    <!-- end navbar -->
+    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">
+        <div class="gap-4">
+            <a class="text-black text-md postTitle pt-1 pb-1 pr-1 pl-1 dark:text-white">سەرەتایەکی نوێ بۆ ماڵپەڕی Rawa.dev</a>
+            <div class="w-full flex relative justify-between items-center mx-auto w-full">
+                <div class="inline-flex">
+                    <div class="md:block">
+                        <a class="inline-block rounded-full" href="#">
+                            <div class="flex items-center relative cursor-pointer whitespace-nowrap font-black logo text-lg gap-2" style="font-family: 'Sahel', sans-serif;">
+                                <p class="text-[11px] md:text-[15px] font-medium">Rawand Ahmed Shaswar</p>
+                                <p class="pt-1" style="opacity: 0.5;">/</p>
+                                <p class="text-[11px] md:text-[15px] font-light date_label pt-[0.5px]" style="opacity: 0.5;">٢٢ی تشرینی ٢٠٢٢</p>
+                                <script> 
+                                    moment.locale("ku"); 
+                                    // Get momentjs from timestamp
+                                    var timestamp = "{{ post.timestamp }}"
+                                    var timestamp_int = parseInt(timestamp)
+                                    var date = moment.unix(timestamp).format('YYYY/MM/Do : h:mm a');
+                                    // Set <p> date_label to date
+                                    document.getElementsByClassName("date_label")[0].innerHTML = date;
+                                </script>
+                            </div>
+                        </a>
+                    </div>
+        
+                    </a>
+                </div>
+                <!-- View Count Start -->
+                <div class="flex-initial text-black dark:text-white">
+                    <div class="flex justify-end items-center relative">
+                        <div class="block">
+                            <div class="inline relative">
+                                <button type="button" class="hover:shadow-lg">
+                                     
+                                    <div class="inline-flex p-1 gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" class="w-5 h-5 stroke-white dark:fill-dark dark:stroke-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                          </svg>
+                                          
+                                        <div class="pb-1 text-sm">{{post.view_count}} بینەر</div>
+        
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- End -->
+            </div>
+            <div class="pt-6 text-black dark:text-white"> 
+                <div class="gap-2">
+                    {% for paragraph in paragraph_list %}
+                    {% if paragraph.type == "text" %}
+                        <p class="mb-3 font-light text-gray-600 dark:text-slate-300 text-base md:text-[20px] leading-normal">{{paragraph.text}}</p>
+
+                    {% elif paragraph.type == "quote" %}
+                    <div class="pt-6">
+                        <blockquote class="p-4 my-4 bg-gray-100 border-r-4 border-black-300 dark:border-white dark:bg-[#57606f]">
+                            <svg aria-hidden="true" class="w-10 h-10 text-gray-400 dark:text-white" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/></svg>
+
+                            <p class="text-xl font-medium leading-relaxed text-gray-900 dark:text-slate-200">{{paragraph.text}}</p>
+                        </blockquote>
+                    </div>
+                    {% elif paragraph.type == "image" %}
+                    <div class="flex justify-center items-center">
+                        <blockquote class="p-4 my-4 bg-gray-100 dark:bg-[#57606f] rounded-lg">
+                        <figure class="">
+                            <img class="h-auto"  src="{{paragraph.image}}" alt="image description">
+                            <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-white font-bold">{{paragraph.text}}</figcaption>
+                        </figure>
+                        </blockquote>
+                    </div>
+                    {% elif paragraph.type == "code" %}
+                    <div class="mx-auto h-auto max-w-xs md:max-w-screen-md" dir="ltr">
+                        <blockquote class="p-2 my-2 bg-gray-100 dark:bg-[#57606f] rounded-lg">
+                            <script src="{{paragraph.text}}"></script>
+                         </blockquote>
+                    </div> 
+                    {% endif %}
+
+                    {% endfor %}
+                    
+                    <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
+                    <div class="mx-auto h-auto max-w-xs md:max-w-screen-md">
+                        <blockquote class="p-2 my-2 bg-gray-100 dark:bg-[#a4b0be] rounded-lg">
+                            <p class="mb-3 font-bold text-gray-700 dark:text-white text-base md:text-[20px] pt-2">بەستەرەکان</p>
+                            <div>
+                                {% for link in links %}
+                                    <div class="gap-2 pt-1">
+                                        <a class="text-[12px] md:text-[14px] font-medium text-blue-700" href="{{link.url}}" target="_blank">👈 {{link.title}}</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                         </blockquote>
+                    </div> 
+                </div>
+
+                
+
+            </div>
+            <!-- TODO: Footer -->
+        </div>
+        
+    </div>
+
+    
+</body>
+
+</html>
