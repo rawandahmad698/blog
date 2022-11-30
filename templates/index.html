@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="{{ url_for('static', path='/dist/font-face.css') }}">
-
-    <!-- Get script moment+locale.js from static/scripts -->
-    <script src="{{ url_for('static', path='/scripts/moment+locale.js') }}"></script>
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="title" content="Rawa.Dev | Rawand Ahmed Shaswar's Blog">
     <meta name="description" content="A personal blog on Python, Swift & AWS">
     <meta name="keywords" content="Swift, Python, AWS, Rawand Ahmed Shaswar">
@@ -18,7 +14,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Rawand Ahmed Shaswar">
-    
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/dist/font-face.css') }}">
+    <!-- Get script moment+locale.js from static/scripts -->
+    <script src="{{ url_for('static', path='/scripts/moment+locale.js') }}"></script>
     <style>
         @font-face {
             font-family: 'Apple SystemUI';
