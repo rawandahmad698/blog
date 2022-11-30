@@ -123,7 +123,7 @@ async def socket_handler():
 
     except Exception as e:
         print("Error in socket_handler:", e)
-        # await socket_handler()
+        await socket_handler()
 
 
 async def background_task():
