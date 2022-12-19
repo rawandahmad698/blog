@@ -85,8 +85,8 @@
         <!-- end followMe -->
     </nav>
     <!-- end navbar -->
-
-    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">
+{#    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">#}
+    <div class="w-full mx-auto px-8 h-20 md:w-3/5">
         {% for post in posts %}
 
         <div class="inline-flex gap-4">
@@ -103,7 +103,9 @@
             // Set <p> date_label to date
             document.getElementsByClassName("dateFor{{post.id}}")[0].innerHTML = date;
         </script>
+            <br>
         {% endfor %}
+
     </div>
 
 

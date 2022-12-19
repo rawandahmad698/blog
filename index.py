@@ -19,7 +19,9 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     # posts = p.get_posts() # Local
+    # print("Posts: {}".format(posts))
     posts = await p.get_posts_from_aws()  # AWS
+    posts = sorted(posts, key=lambda k: k['id'], reverse=True)
     context = {'request': request, 'posts': posts}
     return templates.TemplateResponse("index.html", context)
 

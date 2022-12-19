@@ -1,5 +1,5 @@
 project:blog
-version:1.0.1
+version:1.0.2
 overwrite:index.py
 overwrite:templates/index.html
 overwrite:templates/view_post.html
