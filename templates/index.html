@@ -88,15 +88,33 @@
 {#    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">#}
     <div class="w-full mx-auto px-8 h-20 md:w-3/5">
         {% for post in posts %}
-
+{#            Jinja if statmenet #}
+            {% if post.is_en %}
+                    <div class="ring-2 ring-[#1dd1a1]/20 rounded mb-2" dir="ltr">
+            <div class="pl-2 inline-flex gap-4">
+                <p class="pt-2 dateFor text-slate-400/60 text-[14px] font-bold">EN</p>
+                <p class="pt-2 dateFor{{post.id}} text-slate-400 text-[14px] font-light">Techfest Event</p>
+                <a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a>
+            </div>
+                        <script>
+            moment.locale("en");
+            // Get moment.js from timestamp
+            var timestamp = "{{ post.timestamp }}"
+            var timestamp_int = parseInt(timestamp)
+            var date = moment.unix(timestamp).format('MMMM Do, YYYY');
+            // Set <p> date_label to date
+            document.getElementsByClassName("dateFor{{post.id}}")[0].innerHTML = date;
+        </script>
+        </div>
+            {% else %}
         <div class="inline-flex gap-4">
             <!-- Make text RTL in tailwindcss -->
             <p class="pt-2 dateFor{{post.id}} text-slate-400 text-[14px] font-light">-</p>
             <a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a>
         </div>
         <script> 
-            moment.locale("ku"); 
-            // Get momentjs from timestamp
+            moment.locale("ku");
+            // Get moment.js from timestamp
             var timestamp = "{{ post.timestamp }}"
             var timestamp_int = parseInt(timestamp)
             var date = moment.unix(timestamp).format('MMMM Do, YYYY');
@@ -104,6 +122,7 @@
             document.getElementsByClassName("dateFor{{post.id}}")[0].innerHTML = date;
         </script>
             <br>
+            {% endif %}
         {% endfor %}
 
     </div>

@@ -21,12 +21,16 @@ def parse_paragraphs(yml_file_name: str) -> dict:
             post_data['description'] = post_description
             post_data['image'] = post_image
             post_data['timestamp'] = post_data_raw['timestamp']
+            post_data['locale'] = post_data_raw['locale']
+            post_data['dir'] = post_data_raw['dir']
 
             paragraphs = post_data_raw['paragraphs']
             paragraph_dict = {}
 
             for paragraph in paragraphs:
                 paragraph_dict['text'] = paragraph['text']
+                # Replace \n with <br> to make it a line break
+                paragraph_dict['text'] = paragraph_dict['text'].replace('\n', '<br>')
                 paragraph_dict['type'] = paragraph['type']
                 if paragraph['type'] == 'image':
                     paragraph_dict['image'] = paragraph['image']

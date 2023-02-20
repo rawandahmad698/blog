@@ -108,7 +108,7 @@
         <!-- end followMe -->
     </nav>
     <!-- end navbar -->
-    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5">
+    <div class="w-full flex justify-start items-start mx-auto px-8 h-20 md:w-3/5" dir="{{ post.dir }}">
         <div class="gap-4">
             <a class="text-black text-md postTitle pt-1 pb-1 pr-1 pl-1 dark:text-white">{{post.title}}</a>
             <div class="w-full flex relative justify-between items-center mx-auto w-full">
@@ -119,8 +119,8 @@
                                 <p class="text-[11px] md:text-[15px] font-medium">Rawand Ahmed Shaswar</p>
                                 <p class="pt-1" style="opacity: 0.5;">/</p>
                                 <p class="text-[11px] md:text-[15px] font-light date_label pt-[0.5px]" style="opacity: 0.5;">٢٢ی تشرینی ٢٠٢٢</p>
-                                <script> 
-                                    moment.locale("ku"); 
+                                <script>
+                                    moment.locale("{{ post.locale }}");
                                     // Get momentjs from timestamp
                                     var timestamp = "{{ post.timestamp }}"
                                     var timestamp_int = parseInt(timestamp)
@@ -147,7 +147,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                           </svg>
                                           
-                                        <div class="pb-1 text-sm">{{post.view_count}} بینەر</div>
+                                        <div class="pb-1 text-sm">{{post.view_count}} Views </div>
         
                                     </div>
                                 </button>
@@ -158,10 +158,10 @@
                 <!-- End -->
             </div>
             <div class="pt-6 text-black dark:text-white"> 
-                <div class="gap-2">
+                <div class="gap-1">
                     {% for paragraph in paragraph_list %}
                     {% if paragraph.type == "text" %}
-                        <p class="mb-3 font-light text-gray-600 dark:text-slate-300 text-base md:text-[20px] leading-normal">{{paragraph.text}}</p>
+                        <p class="mb-3 font-light text-gray-600 dark:text-slate-300 text-base md:text-[18px] leading-normal">{{paragraph.text}}</p>
 
                     {% elif paragraph.type == "quote" %}
                     <div class="pt-6">
@@ -192,15 +192,27 @@
                     
                     <hr class="my-8 h-px bg-gray-200 border-0 dark:bg-gray-700">
                     <div class="mx-auto h-auto max-w-xs md:max-w-screen-md">
-                        <blockquote class="p-2 my-2 bg-gray-100 dark:bg-[#a4b0be] rounded-lg">
-                            <p class="mb-3 font-bold text-gray-700 dark:text-white text-base md:text-[20px] pt-2">بەستەرەکان</p>
-                            <div>
+                        <blockquote class="p-2 my-2 bg-gray-100 dark:bg-[#a4b0be]/10 rounded-lg">
+                            {% if post.locale == "en" %}
+                                 <p class="mb-3 font-bold text-gray-700 dark:text-white text-base md:text-[20px] pt-2">Links</p>
+                                <div>
                                 {% for link in links %}
                                     <div class="gap-2 pt-1">
-                                        <a class="text-[12px] md:text-[14px] font-medium text-blue-700" href="{{link.url}}" target="_blank">👈 {{link.title}}</a>
+                                        <a class="text-[14px] md:text-[14px] font-bold text-white-700 underline" href="{{link.url}}" target="_blank">👉 {{link.title}}</a>
                                     </div>
                                 {% endfor %}
                             </div>
+                            {% else %}
+                                <p class="mb-3 font-bold text-gray-700 dark:text-white text-base md:text-[20px] pt-2">بەستەرەکان</p>
+                            <div>
+                                {% for link in links %}
+                                    <div class="gap-2 pt-1">
+                                        <a class="text-[14px] md:text-[14px] font-bold text-white-700 underline" href="{{link.url}}" target="_blank">👈 {{link.title}}</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                             {% endif %}
+
                          </blockquote>
                     </div> 
                 </div>

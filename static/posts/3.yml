@@ -1,0 +1,124 @@
+title: "TechFest Suly: The Epicenter of Innovation and Inspiration"
+description: "Since 2019, Techfest Suli has been dedicated to showcasing the skills and abilities of its participants. However, this year's event was unique in that it was open to individuals from all over the country, It had space for everyone."
+image: 3.jpg
+timestamp: 1676814665
+dir: ltr
+locale: en
+
+paragraphs:
+  - type: image
+    image: 'https://s3.rawa.dev/331049606_976139200034856_2872562809981430298_n.png'
+    text: 'AWS Seminar (Beginning) - Picture by Kurdsat Broadcasting Corporation'
+  - type: text
+    text: ' '
+  - type: text
+    text: "On January 12th, I followed my typical morning routine and was eager to start my workday. While checking my social media, I received a message from Mr. Halwest regarding a potential opportunity to speak at Techfest Suli. I was thrilled beyond words when I read his message."
+
+  - type: text
+    text: "Since 2019, Techfest Suli has been dedicated to showcasing the skills and abilities of its participants, an event managed by the Deputy Prime Minister of Kurdistan, His Excellency Mr Qubad Talabani. However, this year's event was unique in that it was open to individuals from all over the country, It had space for everyone. "
+
+  - type: image
+    image: 'https://s3.rawa.dev/pic_2.png'
+    text: 'With His Excellency, Deputy Prime Minister of Kurdistan Region, Mr. Qubad Talabani'
+
+  - type: text
+    text: "During our conversation, Mr. Halwest mentioned my work on reversing ChatGPT's API, which garnered positive attention and helped establish my reputation. He suggested that I give a presentation on the process, which got me thinking about how to make a bigger impact. I proposed the idea of doing the presentation for AWS, as I am the only Community Builder for AWS in Kurdistan. My aim was to showcase the power of AWS and the cloud, as well as how AWS supports its customers through programs such as those for startups."
+
+  - type: text
+    text: "From there, An Idea began!"
+
+  - type: text
+    text: "I was contemplating the appropriate topics to discuss for an audience of that size. I wanted to ensure that the presentation would be informative, and everyone in attendance would learn something new. Additionally, I was brainstorming ways to compensate individuals for their time and encourage them to try out AWS, thus alleviating any apprehension about transitioning to a new cloud platform. "
+
+  - type: image
+    image: 'https://s3.rawa.dev/credit_vouchers.png'
+    text: 'AWS Credit Vouchers for Techfest Suli'
+
+  - type: text
+    text: "We even had the idea to print out the AWS credits and distribute them as tangible souvenirs to the attendees, which we thought would be a cool way to commemorate the event and encourage people to try out AWS."
+
+  - type: text
+    text: "After 33 days of extensive research, I was finally able to create the perfect seminar. The seminar had a unique story that demonstrated how to host a website on EC2 while safeguarding customer data against common web exploits, DDOS attacks, and Mitm attacks. The script was over 3000 words long and featured 18 slides. I was confident that this seminar would be valuable to my audience and help them gain new knowledge.
+After completing the script, I immediately reached out to my Community Manager, Ernesto Alvarez, who has been a life-saver on several occasions. I asked him how AWS could support this event and its participants. Although I had no prior experience in public speaking and had only made YouTube videos on AWS for fun, Ernesto congratulated me on the opportunity to speak at such an event. He also mentioned that the AWS team could provide up to $900 in AWS credits for participants."
+
+  - type: text
+    text: "On February 17th, I delivered the seminar to an audience of 150+ people. It was a great experience, and I felt like I made a difference. Many people learned new things and were impressed with my presentation. After the presentation, I answered several questions on optimizing AWS costs and securing customer data."
+
+  - type: image
+    image: 'https://s3.rawa.dev/sakar_new.png'
+    text: 'Neergz Project Owner, Sakar receiving AWS Credits.'
+
+  - type: text
+    text: "When I thought the presentation was over, my friend, Mr. Halwest, introduced me to Mr. Twana Saeed, the Director of IT & Statistics at the University of Sulaimaniyah. Mr. Twana was impressed with the competition in the cloud industry in Kurdistan and the impact that I was making by teaching people about AWS. He appreciated how flexible and supportive the platform is, and acknowledged that the whole technology sector in Kurdistan is currently based on GCP and Azure."
+
+  - type: text
+    text: "I am committed to bringing AWS to Kurdistan and promoting it to every citizen in our country. I want to assure you that AWS supports businesses of all sizes and has special programs for startups. We are grateful that AWS is supporting our efforts to promote its services in the region, and we have bigger plans to achieve this goal."
+
+  - type: text
+    text: ""
+
+  - type: text
+    text: "More pictures from the event:"
+
+  - type: image
+    image: 'https://s3.rawa.dev/image_1.png'
+    text: 'FIRST: KurdSat Broadcasting Corporation | SECOND: Techfest Volunteer | THIRD: Audience'
+
+  - type: image
+    image: 'https://s3.rawa.dev/image_2.png'
+    text: 'FIRST: Mr Zhilwan Abdulla (Event Organizer) | SECOND: Me and My Friend Dolan Heris | THIRD: AWS Credit Code'
+
+  - type: text
+    text: "Before we go."
+
+  - type: text
+    text: "I would like to extend our heartfelt gratitude to the following individuals and groups for making this event a great success:"
+
+  - type: text
+    text: "- Mr Jason Dunn, AWS Community Program Lead"
+
+  - type: text
+    text: "- Mr Ernesto Alvarez, AWS Community Manager"
+
+  - type: text
+    text: "Special thanks to:"
+  - type: text
+    text: "1. Zhilwan Abdulla"
+  - type: text
+    text: "2. Halwest Sattar"
+  - type: text
+    text: "3. Arez Awat"
+  - type: text
+    text: "4. Makwan Barzan Karim"
+  - type: text
+    text: "5. Rasty Salam"
+  - type: text
+    text: "And:"
+  - type: text
+    text: "1. Our amazing event volunteers, we couldn't have done it without you!"
+  - type: text
+    text: "2. Our esteemed guests from various universities and communities."
+  - type: text
+    text: "I would also like to express our sincere appreciation to the following individuals for their invaluable support:"
+  - type: text
+    text: "1. His Excellency Mr. Qubad Talabani, Deputy Prime Minister of Kurdistan"
+  - type: text
+    text: "2. Mr. Twana Saeed, Director of IT and Statistics at the University of Sulaimaniyah."
+
+  - type: text
+    text: "Thank you for reading this article. I hope you enjoyed it. If you have any questions, please feel free to reach out to me on Twitter or LinkedIn."
+
+
+links:
+  - title: 'Techfest Suli Website'
+    url: 'https://www.techfestsuli.com'
+
+  - title: 'University of Sulaimaniyah'
+    url: 'https://en.wikipedia.org/wiki/University_of_Sulaymaniyah'
+
+  - title: 'Twana Saeed'
+    url: 'https://it.univsul.edu.iq/directors/'
+
+  - title: 'Amazon Web Services'
+    url: 'https://aws.amazon.com'
+

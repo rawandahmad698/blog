@@ -15,14 +15,20 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+test_mode = True
 
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     # posts = p.get_posts() # Local
     # print("Posts: {}".format(posts))
-    posts = await p.get_posts_from_aws()  # AWS
+    if not test_mode:
+        posts = await p.get_posts_from_aws()  # AWS
+    else:
+        posts = p.get_posts()  # Local
+
     posts = sorted(posts, key=lambda k: k['id'], reverse=True)
     context = {'request': request, 'posts': posts}
+    print("Context: {}".format(context))
     return templates.TemplateResponse("index.html", context)
 
 
@@ -32,21 +38,26 @@ async def read_item(request: Request, pid: str):
         posts = await p.get_posts_from_aws()  # AWS
         return templates.TemplateResponse("index.html", {"request": request, "posts": posts})
 
-    # post_data = pp.parse_paragraphs(f"{pid}.yml") # Local
-    post_data = await pp.parse_paragraphs_aws(f"{pid}.yml")  # AWS
-    if post_data is None:
-        posts = await p.get_posts_from_aws()  # AWS
-        return templates.TemplateResponse("index.html", {"request": request, "posts": posts})
+    if not test_mode:
+        post_data = await pp.parse_paragraphs_aws(f"{pid}.yml")  # AWS
+        if post_data is None:
+            posts = await p.get_posts_from_aws()  # AWS
+            return templates.TemplateResponse("index.html", {"request": request, "posts": posts})
+    else:
+        post_data = pp.parse_paragraphs(f"{pid}.yml") # Local
 
     title = post_data['title']
     description = post_data['description']
     image = post_data['image']
     timestamp = post_data['timestamp']
+    locale = post_data['locale']
+    direction = post_data['dir']
 
     await u.increment_post_views(pid)
 
     view_count = await u.get_post_views(pid)
-    view_count = u.num_to_ar(view_count)
+    if locale != "en":
+        view_count = u.num_to_ar(view_count)
 
     post = {
         'title': title,
@@ -54,7 +65,10 @@ async def read_item(request: Request, pid: str):
         'image': image,
         'view_count': view_count,
         'timestamp': timestamp,
+        "locale": locale,
+        "dir": direction
     }
     context = {"request": request, 'paragraph_list': post_data['paragraphs'], 'links': post_data['links'],
                'post': post}
+    print("Context: {}".format(context))
     return templates.TemplateResponse("view_post.html", context)
