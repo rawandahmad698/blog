@@ -104,6 +104,9 @@ After completing the script, I immediately reached out to my Community Manager, 
   - type: text
     text: "Thank you for reading this article. I hope you enjoyed it. If you have any questions, please feel free to reach out to me on Twitter or LinkedIn."
 
+  - type: image
+    image: 'https://s3.rawa.dev/staff.png'
+    text: 'Techfest Suli Staff and Volunteers'
 
 links:
   - title: 'Techfest Suli Website'

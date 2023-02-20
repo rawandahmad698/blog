@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="New post">
-      <change afterPath="$PROJECT_DIR$/static/posts/3.yml" afterDir="false" />
+    <list default="true" id="40bc97fc-2ea8-4f8a-86c4-37daf85f5047" name="Changes" comment="New changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/paragraph_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/paragraph_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/posts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/posts/1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/posts/1.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/posts/2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/posts/2.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/view_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/posts/3.yml" beforeDir="false" afterPath="$PROJECT_DIR$/static/posts/3.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +177,7 @@
       <workItem from="1669921974732" duration="310000" />
       <workItem from="1671454249464" duration="1735000" />
       <workItem from="1676813389225" duration="3823000" />
-      <workItem from="1676902258466" duration="4517000" />
+      <workItem from="1676902258466" duration="5631000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1669803895680</created>
@@ -417,7 +410,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671455387235</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="New changes">
+      <created>1676909434099</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909434099</updated>
+    </task>
+    <task id="LOCAL-00035" summary="New changes">
+      <created>1676909639710</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909639710</updated>
+    </task>
+    <task id="LOCAL-00036" summary="New changes">
+      <created>1676909858695</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909858695</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +459,8 @@
     <MESSAGE value="Upload posts to S3" />
     <MESSAGE value="Alpha version" />
     <MESSAGE value="New post" />
-    <option name="LAST_COMMIT_MESSAGE" value="New post" />
+    <MESSAGE value="New changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog_fast_api$main.coverage" NAME="main Coverage Results" MODIFIED="1669726926473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
