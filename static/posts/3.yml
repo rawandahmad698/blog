@@ -44,10 +44,6 @@ After completing the script, I immediately reached out to my Community Manager, 
   - type: text
     text: "On February 17th, I delivered the seminar to an audience of 150+ people. It was a great experience, and I felt like I made a difference. Many people learned new things and were impressed with my presentation. After the presentation, I answered several questions on optimizing AWS costs and securing customer data."
 
-  - type: image
-    image: 'https://s3.rawa.dev/sakar_new.png'
-    text: 'Neergz Project Owner, Sakar receiving AWS Credits.'
-
   - type: text
     text: "When I thought the presentation was over, my friend, Mr. Halwest, introduced me to Mr. Twana Saeed, the Director of IT & Statistics at the University of Sulaimaniyah. Mr. Twana was impressed with the competition in the cloud industry in Kurdistan and the impact that I was making by teaching people about AWS. He appreciated how flexible and supportive the platform is, and acknowledged that the whole technology sector in Kurdistan is currently based on GCP and Azure."
 
