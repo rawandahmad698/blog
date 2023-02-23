@@ -1,13 +1,13 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>
-
 <!doctype html>
 <html>
 
-<head>
+<head lang="en">
+    <link rel="icon" type="image/png" href="https://d1.awsstatic.com/Developer%20Marketing/developer-center/community-builder/icons/AWS-Community-Builder_Icon_Hands_130px.9c77762fe71fdf8da15bea3dde6b96f40119ece8.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <title>Rawa.dev | A blog by Rawand Ahmed Shaswar</title>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="title" content="Rawa.Dev | Rawand Ahmed Shaswar's Blog">
     <meta name="description" content="A personal blog on Python, Swift & AWS">
@@ -17,9 +17,6 @@
     <meta name="language" content="English">
     <meta name="author" content="Rawand Ahmed Shaswar">
 
-    <link rel="preconnect" href="//fdn.fontcdn.ir">
-    <link rel="preconnect" href="//v1.fontapi.ir">
-    <link href="https://v1.fontapi.ir/css/Sahel:300;400;600;700;900" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.js" integrity="sha512-NXopZjApK1IRgeFWl6aECo0idl7A+EEejb8ur0O3nAVt15njX9Gvvk+ArwgHfbdvJTCCGC5wXmsOUXX+ZZzDQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -32,15 +29,12 @@
       gtag('config', 'G-K5BGSK4Y10');
     </script>
     <style>
-
-        
         body {
             font-family: 'Sahel', sans-serif;
         }
         /* When postTitle in hover, make a rectangle yellowish background appear */
         .postTitle:hover {
             background-color: rgba(234, 250, 130, 0.5)
-            /* Make backrgound opacity 0.5 */
         }
     </style>
 
@@ -84,7 +78,6 @@
                         <button type="button" class="hover:shadow-lg bg-black dark:text-white dark:bg-white">
                             <div class="px-2 pt-1 pb-1">
                                 <a class="text-white text-xs dark:text-black md:text-lg font-semibold" href="https://twitter.com/RawandShaswar" target="_blank">Follow Me</a>
-
                             </div>
                         </button>
                     </div>
@@ -103,7 +96,7 @@
             <div class="pl-2 inline-flex gap-4">
                 <p class="pt-2 dateFor text-slate-400/60 text-[14px] font-bold">EN</p>
                 <p class="pt-2 dateFor{{post.id}} text-slate-400 text-[14px] font-light">Techfest Event</p>
-                <a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a>
+                <h1><a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a></h1>
             </div>
                         <script>
             moment.locale("en");
@@ -119,7 +112,7 @@
         <div class="inline-flex gap-4">
             <!-- Make text RTL in tailwindcss -->
             <p class="pt-2 dateFor{{post.id}} text-slate-400 text-[14px] font-light">-</p>
-            <a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a>
+            <h1><a class="text-black dark:text-white text-md font-bold text-[18px] pt-1 pb-1 pr-1 pl-1 postTitle" href="/post?pid={{post.id}}">{{post.title}}</a></h1>
         </div>
         <script> 
             moment.locale("ku");
@@ -136,6 +129,9 @@
 
     </div>
 
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+    <link rel="preconnect" href="//v1.fontapi.ir">
+    <link href="https://v1.fontapi.ir/css/Sahel:300;400;600;700;900" rel="stylesheet">
 
 </body>
 
